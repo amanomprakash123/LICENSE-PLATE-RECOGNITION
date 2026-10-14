@@ -1,0 +1,71 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+
+# Distribution / packaging
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Virtual Environments
+venv/
+env/
+ENV/
+env.bak/
+venv.bak/
+
+# Node modules & build
+node_modules/
+frontend/node_modules/
+frontend/dist/
+dist/
+
+# Environment variables
+.env
+backend/.env
+frontend/.env.local
+
+# Databases
+*.db
+*.sqlite
+*.sqlite3
+backend/lpr.db
+
+# User uploads & cache (except samples)
+backend/uploads/original_*.jpg
+backend/uploads/crop_*.jpg
+backend/uploads/annotated_*.jpg
+
+# Large model weights (downloaded automatically on runtime)
+*.pt
+backend/*.pt
+
+# OS generated files
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
