@@ -9,7 +9,9 @@ router = APIRouter(prefix="/auth", tags=["authentication"])
 
 @router.post("/login", response_model=schemas.Token)
 def login(login_req: schemas.LoginRequest, db: Session = Depends(get_db)):
-    user = db.query(models.User).filter(models.User.username == login_req.username).first()
+    user = db.query(models.User).filter(
+        (models.User.username == login_req.username) | (models.User.email == login_req.username)
+    ).first()
     if not user or not verify_password(login_req.password, user.hashed_password):
         raise HTTPException(
             status_code=status.HTTP_401_UNAUTHORIZED,
